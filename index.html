@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau Droit Pénal vs Civil</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: 'Calibri', Arial, sans-serif;
             padding: 40px;
             background: white;
+            margin: 0;
         }
         
         .header {
@@ -32,6 +37,7 @@
             border-collapse: collapse;
             margin: 20px 0;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            table-layout: fixed;
         }
         
         th {
@@ -59,16 +65,18 @@
         }
         
         td {
-            padding: 15px;
+            padding: 0;
             border: 2px solid #bdc3c7;
             vertical-align: top;
             font-size: 16px;
+            height: auto;
         }
         
         td:first-child {
             background: #ecf0f1;
             font-weight: bold;
             color: #2c3e50;
+            padding: 15px;
         }
         
         td:nth-child(2) {
@@ -83,9 +91,13 @@
             min-height: 80px;
             outline: none;
             cursor: text;
-            display: block;
+            padding: 15px;
             width: 100%;
-            padding: 5px;
+            height: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: pre-wrap;
+            display: block;
         }
         
         .editable:focus {
